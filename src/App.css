@@ -90,7 +90,12 @@ form.login, form.register{
   border-bottom: 1px solid #ccc;
   border-radius: 10px;
 
+/* to center only the header of the login page  */
  }
+  form.login h1, form.register h1{
+    text-align: center;
+  }
+
 .pagetitle{
   color: rgba(0, 0, 0, 0.726);
   text-align: center;

@@ -6,15 +6,19 @@ import Header from './Header';
 import IndexPage from './Pages/indexPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
+import CreatePost from './Pages/CreatePost'; 
 import { UserContextProvider } from './UserContext';
 function App() {
   return (
     <UserContextProvider>
       <Routes>
         <Route path="/" element ={<Layout/>}>
+          
           <Route index element ={<IndexPage />} /> 
           <Route path='/login' element= {<LoginPage />} /> 
           <Route path='/register' element= {<RegisterPage />} /> 
+          <Route path = '/create' element ={ < CreatePost />} /> 
+
         </Route>
     </Routes>
 
