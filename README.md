@@ -1,6 +1,6 @@
 Welcome to the Blog Website project! This is a full-stack web application built with React, MongoDB, Express, and Node.js. The project is divided into two main parts: the API and the client-side application.
 
-  Overview:
+Overview:
 This project aims to provide a platform for users to create and share blog posts. Users can register an account, log in, create new posts, view existing posts, and edit their own posts.
 
   Features:
@@ -10,8 +10,8 @@ This project aims to provide a platform for users to create and share blog posts
 - Edit Posts: Authenticated users can edit their own posts.
 
     Installation:
-  -Clone the repository: git clone https://github.com/fifki/MyBlogWebsite.git
-  -Install dependencies for both the API and the client-side application:
+-Clone the repository: git clone https://github.com/fifki/MyBlogWebsite.git
+-Install dependencies for both the API and the client-side application:
 bcryptjs - browserify-zlib - cookie-parser - cookie - cors - date-fns - jsonwebtoken - localforage - match-sorter- mongodb
 mongoose - multer - react-dom - react-quill - react-router-dom - react-scripts - react - sort-by - web-vitals
 
