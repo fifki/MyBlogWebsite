@@ -1,16 +1,25 @@
-export default function Post(){
+import { formatISO9075 } from "date-fns";
+import { Link } from "react-router-dom";
+
+export default function Post( { _id, title , summary , cover , content , createdAt, author}){
     return (
       <div className = "post">
         <div classeName="image">
-          <img src="https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg" />
+          <Link to ={'/post/${id}'}>
+            <img src= {'http://localhost:4000'+cover} alt="" />
+          </Link>
         </div>
         <div className="texts">
-          <h2> Just a perfect moment</h2>
+          <Link to ={'/post/${id}'}>
+           <h2> {title}</h2>
+          </Link>
           <p className="info">
-            <a className="autor"> Fatime Ifkirne </a>
-            <time>2020-01-01 12:30 </time>
+            <a className="author"> {author.username} </a>
+            {/* //to display a better date we install npm date-fns 
+            this function need a new date */}
+            <time>{formatISO9075(new Date(createdAt))} </time>
           </p>
-          <p className="summary "> it was really great weather after rain  </p>
+          <p className="summary "> {summary}  </p>
         </div>
       </div>
           );
