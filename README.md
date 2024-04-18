@@ -24,7 +24,7 @@ mongoose - multer - react-dom - react-quill - react-router-dom - react-scripts -
 - Create new blog posts by clicking on the "Create Post" button.
 - View all posts on the homepage.
 - Click on a post to view its details.
-- Edit or delete your own posts by clicking on the respective buttons on the post page.
+- Edit your own posts by clicking on the respective buttons on the post page.
 
   Technologies Used:
 -React
