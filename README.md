@@ -1,9 +1,9 @@
 Welcome to the Blog Website project! This is a full-stack web application built with React, MongoDB, Express, and Node.js. The project is divided into two main parts: the API and the client-side application.
 
-Overview:
+  Overview:
 This project aims to provide a platform for users to create and share blog posts. Users can register an account, log in, create new posts, view existing posts, and edit their own posts.
 
-Features:
+  Features:
 - User Authentication: Users can register an account and log in to access the full functionality of the website.
 - Create and Edit Posts: Authenticated users can create new blog posts and edit their existing posts.
 - View Posts: Users can view all posts available on the platform, including the ones created by other users.
