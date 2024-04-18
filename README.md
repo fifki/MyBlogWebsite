@@ -9,6 +9,11 @@ This project aims to provide a platform for users to create and share blog posts
 - View Posts: Users can view all posts available on the platform, including the ones created by other users.
 - Edit Posts: Authenticated users can edit their own posts.
 
+    Installation:
+  -Clone the repository: git clone https://github.com/fifki/MyBlogWebsite.git
+  -Install dependencies for both the API and the client-side application:
+bcryptjs - browserify-zlib - cookie-parser - cookie - cors - date-fns - jsonwebtoken - localforage - match-sorter- mongodb
+mongoose - multer - react-dom - react-quill - react-router-dom - react-scripts - react - sort-by - web-vitals
 
   Repository Structure:
 - api: This directory contains the server-side code for the API built with Express.js. It handles authentication, database interactions, and serves as the backend for the client-side application.
