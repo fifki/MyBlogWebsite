@@ -1,24 +1,24 @@
-*{
+* {
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
-a{
+a {
   cursor: pointer;
 }
-body{
+body {
   color: #222;
 }
-img{
+img {
   max-width: 60%;
   height: auto;
 }
-main{
-  padding : 10px;
+main {
+  padding: 10px;
   max-width: 960px;
   margin: 0 auto;
 }
-header{
-  display : flex ;
+header {
+  display: flex;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -27,26 +27,26 @@ header{
 
 header a {
   text-decoration: none;
-  color : inherit
+  color: inherit;
 }
-header a.logo{
+header a.logo {
   font-weight: bold;
   font-size: 1.4rem;
 }
-header nav{
+header nav {
   display: flex;
   gap: 15px;
 }
-div.post{
+div.post {
   display: grid;
-  grid-template-columns:1fr ;
-  
+  grid-template-columns: 1fr;
+
   gap: 20px;
   margin-bottom: 10px;
 }
-@media  screen and (min-width: 700px) {
-  div.post{
-    grid-template-columns:0.9fr 1.1fr ;
+@media screen and (min-width: 700px) {
+  div.post {
+    grid-template-columns: 0.9fr 1.1fr;
   }
 }
 
@@ -56,112 +56,108 @@ div.post div.texts h2 {
 }
 
 div.post div.text a {
-  text-decoration: none ;
+  text-decoration: none;
   color: inherit;
-
 }
 div.post div.image {
-  width: 40%; 
+  width: 40%;
 }
-div.post p.info{
+div.post p.info {
   margin: 0;
   color: #888;
-  font-size: .7rem;
-  font-weight : bold;
+  font-size: 0.7rem;
+  font-weight: bold;
   display: flex;
   gap: 10px;
 }
-div.post p.info a.autor{
+div.post p.info a.autor {
   color: #333;
-} 
+}
 div.post P.summary {
   margin: 10px 0;
   line-height: 1.5rem;
 }
 
-form.login, form.register{
+form.login,
+form.register {
   max-width: 400px;
-  margin: 0 auto; 
-
+  margin: 0 auto;
 }
- input{
+input {
   display: block;
-  margin-bottom:5px ;
+  margin-bottom: 5px;
   width: 100%;
   padding: 5px 7px;
   border: 2px solid #ddd;
   background-color: #eee;
   border-bottom: 1px solid #ccc;
   border-radius: 10px;
- }
- button{
+}
+button {
   cursor: pointer;
-  display: block ;
-  margin-bottom:5px ;
+  display: block;
+  margin-bottom: 5px;
   width: 100%;
-  padding: 5px 7px ;
+  padding: 5px 7px;
   border: 2px solid #ddd;
   background-color: #eee;
   border-bottom: 1px solid #ccc;
   border-radius: 10px;
 
-/* to center only the header of the login page  */
- }
-  form.login h1, form.register h1{
-    text-align: center;
-  }
+  /* to center only the header of the login page  */
+}
+form.login h1,
+form.register h1 {
+  text-align: center;
+}
 
-.pagetitle{
+.pagetitle {
   color: rgba(0, 0, 0, 0.726);
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 div.post-page div.image {
-max-width: 200px;
-display: flex;
-overflow: hidden;
+  max-width: 200px;
+  display: flex;
+  overflow: hidden;
 }
 
-div.post-image div.image img{
+div.post-image div.image img {
   object-fit: cover;
   object-position: center center;
   width: 100%;
-
 }
-div.post-page a{
+div.post-page a {
   color: #333;
   text-decoration: underline;
-
 }
-div.post-page h1{
+div.post-page h1 {
   text-align: center;
   margin: 10px 0 5px;
-
 }
 
-div.post-page time{
+div.post-page time {
   text-align: center;
   display: block;
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: #aaa;
 }
 
-div.post-page div.author{
+div.post-page div.author {
   text-align: center;
   margin-bottom: 20px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 div.post-page div.content p {
   line-height: 1.6rem;
-
 }
-div.edit-row{
+div.edit-row {
   text-align: center;
   margin-bottom: 20px;
 }
-div.post-page a.edit-btn{
+div.post-page a.edit-btn {
   background-color: #333;
   display: inline-flex;
   align-items: center;
@@ -170,8 +166,7 @@ div.post-page a.edit-btn{
   padding: 15px 30px;
   border-radius: 5px;
   text-decoration: none;
-  
 }
-a svg{
-  height:20px;
+a svg {
+  height: 20px;
 }
