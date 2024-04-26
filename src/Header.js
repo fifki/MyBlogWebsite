@@ -30,19 +30,19 @@ export default function Header() {
         MyBlog{" "}
       </Link>
       <nav>
-        {username && (
+        { (
           <>
             {/* <span> Hello, {username} </span> */}
             <Link to="/create"> Create new post </Link>
             <a onClick={logout}> Logout </a>
           </>
         )}
-        {!username && (
+        {/* {!username && (
           <>
             <Link to="/login"> Login </Link>
             <Link to="/register"> Register </Link>
           </>
-        )}
+        )} */}
       </nav>
     </header>
   );

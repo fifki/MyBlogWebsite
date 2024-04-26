@@ -30,9 +30,9 @@ export default function CreatePost() {
       body: data,
       credentials: "include",
     });
-    if (response.ok) {
-      setRedirect(true);
-    }
+    // if (response.ok) {
+    //   setRedirect(true);
+    // }
   }
 
   if (redirect) {

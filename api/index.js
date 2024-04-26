@@ -2,16 +2,20 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser");
 const multer = require("multer");
-const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
 const User = require("./models-mongo/User.js");
 const fs = require("fs");
 const Post = require("./models-mongo/Post.js");
-const db = require("./models");
+
 const uploadMiddleware = multer({ dest: "uploads/" });
-const app = express();
+const db = require("./models");
 const secret = "fatimamotaamine";
+const path = require("path");
+
+
+
+const app = express();
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -30,17 +34,22 @@ app.post("/register", async (req, res) => {
   const User = db.users;
   const { username, password } = req.body;
   console.log(username, password);
-  const newUser = User.create({
-    username,
-    password,
-  });
+  try {
+    
+    const newUser = User.create({
+      username,
+      password :bcrypt.hashSync(password, salt) ,
+    });
+  } catch (error) {
+    res.status(400).json(e);
+  }
   // try{
   // const userDoc =  await User.create({
   //     username,
   //     passeword: bcrypt.hashSync(passeword, salt), });
   // res.json(userDoc);
   // } catch(e){
-  //     res.status(400).json(e);
+  //     
   // }
   res.send({ message: "regested succefully" });
 });
@@ -85,28 +94,33 @@ app.get("/post", (req, res) => {
 
 app.post("/post", uploadMiddleware.single("file"), async (req, res) => {
   const { originalname } = req.file;
+  console.log(originalname);
   const parts = originalname.split(".");
-  const ext = parts[parts.length - 1];
+  const fileName = parts[0];
+  const ext = parts.at(-1);
   //renaming the file
-  const newPath = path + "." + ext;
-  fs.renameSync(path, newPath);
+  const newPath = path.join(__dirname,"uploads",fileName)+`.${ext}`;
+  const oldPath = path.join(__dirname,"..",uploads,fileName);
+  console.log(fileName);
+  fs.renameSync(oldPath, newPath);
 
-  //to get the id of the author
-  const { token } = req.cookies;
-  jwt.verify(token, secret, {}, async (err, info) => {
-    if (err) throw err;
-    //creating the post
-    const { title, summary, content } = req.body;
-    const postDoc = await Post.create({
-      title,
-      summary,
-      content,
-      cover: newPath,
-      author: info.id,
-    });
+  // //to get the id of the author
+  // const { token } = req.cookies;
+  // jwt.verify(token, secret, {}, async (err, info) => {
+  //   if (err) throw err;
+  //   //creating the post
+  //   const { title, summary, content } = req.body;
+  //   const postDoc = await Post.create({
+  //     title,
+  //     summary,
+  //     content,
+  //     cover: newPath,
+  //     author: info.id,
+  //   });
 
-    res.json(postDoc);
-  });
+    // res.json(postDoc);
+    // });
+    res.json({message: "saved"});
 });
 app.put("/post", uploadMiddleware.single("file"), async (req, res) => {
   let newPath = null;
